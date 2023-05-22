@@ -217,7 +217,7 @@ public class GameController implements GameListener {
                 win();//每次动都检查有没有赢家
             }
         }
-    }//TODO:可能要在cell里再删一次???已经被吃掉了但是没画出来，哪里没删掉吗？？？
+    }
 
 
     public void undo() {
@@ -229,6 +229,7 @@ public class GameController implements GameListener {
         }
         view.repaint();
         eachStep.remove(eachStep.get(eachStep.size() - 1));
+        
         swapColor();
         ChessGameFrame.changeCurrentPlayer();
         gameRound--;
